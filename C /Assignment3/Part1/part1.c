@@ -1,5 +1,5 @@
 //Grace Gong
-//251151854
+
 #include <stdio.h>
 //main function
 int main(){

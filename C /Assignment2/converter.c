@@ -1,5 +1,4 @@
 //Name: Grace Gong
-//Student Number: 251151854
 //Name of program is converter.c
 //Purpose of program: A converter that converts Kilometer and Mile, Meter and Feet, Centimetre and Inch, and Celsius and Fahrenheit
 

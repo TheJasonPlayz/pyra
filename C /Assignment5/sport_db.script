@@ -1,0 +1,469 @@
+Last login: Wed Apr  6 10:12:36 on ttys000
+gracegong@dyn172-23-41-186 ~ % ssh ggong3@compute.gaul.csd.uwo.ca
+ggong3@compute.gaul.csd.uwo.ca's password: 
+Last login: Wed Apr  6 10:35:46 2022 from 192.159.177.240
+[ggong3@compute ~]$ cd 2211
+[ggong3@compute 2211]$ cd Assignments
+[ggong3@compute Assignments]$ ls
+Assignment1  CS2211_A5
+[ggong3@compute Assignments]$ cd CS2211_A5
+[ggong3@compute CS2211_A5]$ make 
+make all
+make[1]: Entering directory '/home/ggong3/2211/Assignments/CS2211_A5'
+gcc -c sport_events.c
+gcc -c sport_athlete.c
+sport_athlete.c: In function ‘insert_athlete’:
+sport_athlete.c:113:5: warning: ‘fgets’ writing 50 bytes into a region of size 25 overflows the destination [-Wstringop-overflow=]
+  113 |     fgets(newAthlete->name, 50,stdin);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from sport_athlete.c:1:
+sport_athlete.h:10:10: note: destination object ‘name’ of size 25
+   10 |     char name[25];
+      |          ^~~~
+In file included from sport_athlete.h:2,
+                 from sport_athlete.c:1:
+/usr/include/stdio.h:568:14: note: in a call to function ‘fgets’ declared with attribute ‘access (write_only, 1, 2)’
+  568 | extern char *fgets (char *__restrict __s, int __n, FILE *__restrict __stream)
+      |              ^~~~~
+sport_athlete.c:114:5: warning: ‘fgets’ writing 50 bytes into a region of size 25 overflows the destination [-Wstringop-overflow=]
+  114 |     fgets(newAthlete->name, 50,stdin);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from sport_athlete.c:1:
+sport_athlete.h:10:10: note: destination object ‘name’ of size 25
+   10 |     char name[25];
+      |          ^~~~
+In file included from sport_athlete.h:2,
+                 from sport_athlete.c:1:
+/usr/include/stdio.h:568:14: note: in a call to function ‘fgets’ declared with attribute ‘access (write_only, 1, 2)’
+  568 | extern char *fgets (char *__restrict __s, int __n, FILE *__restrict __stream)
+      |              ^~~~~
+sport_athlete.c: In function ‘update_athlete’:
+sport_athlete.c:172:13: warning: ‘fgets’ writing 50 bytes into a region of size 25 overflows the destination [-Wstringop-overflow=]
+  172 |             fgets(newAthlete->name, 50, stdin);
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from sport_athlete.c:1:
+sport_athlete.h:10:10: note: destination object ‘name’ of size 25
+   10 |     char name[25];
+      |          ^~~~
+In file included from sport_athlete.h:2,
+                 from sport_athlete.c:1:
+/usr/include/stdio.h:568:14: note: in a call to function ‘fgets’ declared with attribute ‘access (write_only, 1, 2)’
+  568 | extern char *fgets (char *__restrict __s, int __n, FILE *__restrict __stream)
+      |              ^~~~~
+sport_athlete.c:173:13: warning: ‘fgets’ writing 50 bytes into a region of size 25 overflows the destination [-Wstringop-overflow=]
+  173 |             fgets(newAthlete->name, 50, stdin);
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from sport_athlete.c:1:
+sport_athlete.h:10:10: note: destination object ‘name’ of size 25
+   10 |     char name[25];
+      |          ^~~~
+In file included from sport_athlete.h:2,
+                 from sport_athlete.c:1:
+/usr/include/stdio.h:568:14: note: in a call to function ‘fgets’ declared with attribute ‘access (write_only, 1, 2)’
+  568 | extern char *fgets (char *__restrict __s, int __n, FILE *__restrict __stream)
+      |              ^~~~~
+gcc -c sport_db.c
+gcc -o assignment5  sport_events.o sport_athlete.o sport_db.o
+make[1]: Leaving directory '/home/ggong3/2211/Assignments/CS2211_A5'
+[ggong3@compute CS2211_A5]$ ./assignment5
+****************************
+* 2211 Winter Olympics!    *
+****************************
+
+
+Enter entity type (h for help, q to quit, e for events, a for athletes): e
+Event:
+	Enter operation code
+	(i to insert, s to search,
+	u to update, p to print,
+	d to dump, r to restore,
+	e to erase): i
+Enter event code: 5
+Enter event name: skating
+Enter number of competitors: 12
+Enter the gender: W
+
+Enter entity type (h for help, q to quit, e for events, a for athletes): e
+Event:
+	Enter operation code
+	(i to insert, s to search,
+	u to update, p to print,
+	d to dump, r to restore,
+	e to erase): i
+Enter event code: 7
+Enter event name: skiing
+Enter number of competitors: 13
+Enter the gender: M
+
+Enter entity type (h for help, q to quit, e for events, a for athletes): e
+Event:
+	Enter operation code
+	(i to insert, s to search,
+	u to update, p to print,
+	d to dump, r to restore,
+	e to erase): s
+Enter event code: 7
+Event Code      Event Name          Competitors      Gender
+     7	         skiing	                13		      M
+
+Enter entity type (h for help, q to quit, e for events, a for athletes): q
+[ggong3@compute CS2211_A5]$ exit
+logout
+Connection to compute.gaul.csd.uwo.ca closed.
+gracegong@dyn172-23-41-186 ~ % ssh ggong3@compute.gaul.csd.uwo.ca
+ggong3@compute.gaul.csd.uwo.ca's password: 
+Last login: Wed Apr  6 16:47:18 2022 from 172.23.41.186
+[ggong3@compute ~]$ script sport_db.txt
+Script started, output log file is 'sport_db.txt'.
+[ggong3@compute ~]$ cd 2211
+[ggong3@compute 2211]$ cd Assignments
+[ggong3@compute Assignments]$ ls
+Assignment1  CS2211_A5
+[ggong3@compute Assignments]$ cd CS2211_A5
+[ggong3@compute CS2211_A5]$ make
+make all
+make[1]: Entering directory '/home/ggong3/2211/Assignments/CS2211_A5'
+gcc -c sport_events.c
+gcc -c sport_athlete.c
+sport_athlete.c: In function ‘insert_athlete’:
+sport_athlete.c:113:5: warning: ‘fgets’ writing 50 bytes into a region of size 25 overflows the destination [-Wstringop-overflow=]
+  113 |     fgets(newAthlete->name, 50,stdin);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from sport_athlete.c:1:
+sport_athlete.h:10:10: note: destination object ‘name’ of size 25
+   10 |     char name[25];
+      |          ^~~~
+In file included from sport_athlete.h:2,
+                 from sport_athlete.c:1:
+/usr/include/stdio.h:568:14: note: in a call to function ‘fgets’ declared with attribute ‘access (write_only, 1, 2)’
+  568 | extern char *fgets (char *__restrict __s, int __n, FILE *__restrict __stream)
+      |              ^~~~~
+sport_athlete.c:114:5: warning: ‘fgets’ writing 50 bytes into a region of size 25 overflows the destination [-Wstringop-overflow=]
+  114 |     fgets(newAthlete->name, 50,stdin);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from sport_athlete.c:1:
+sport_athlete.h:10:10: note: destination object ‘name’ of size 25
+   10 |     char name[25];
+      |          ^~~~
+In file included from sport_athlete.h:2,
+                 from sport_athlete.c:1:
+/usr/include/stdio.h:568:14: note: in a call to function ‘fgets’ declared with attribute ‘access (write_only, 1, 2)’
+  568 | extern char *fgets (char *__restrict __s, int __n, FILE *__restrict __stream)
+      |              ^~~~~
+sport_athlete.c: In function ‘update_athlete’:
+sport_athlete.c:172:13: warning: ‘fgets’ writing 50 bytes into a region of size 25 overflows the destination [-Wstringop-overflow=]
+  172 |             fgets(newAthlete->name, 50, stdin);
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from sport_athlete.c:1:
+sport_athlete.h:10:10: note: destination object ‘name’ of size 25
+   10 |     char name[25];
+      |          ^~~~
+In file included from sport_athlete.h:2,
+                 from sport_athlete.c:1:
+/usr/include/stdio.h:568:14: note: in a call to function ‘fgets’ declared with attribute ‘access (write_only, 1, 2)’
+  568 | extern char *fgets (char *__restrict __s, int __n, FILE *__restrict __stream)
+      |              ^~~~~
+sport_athlete.c:173:13: warning: ‘fgets’ writing 50 bytes into a region of size 25 overflows the destination [-Wstringop-overflow=]
+  173 |             fgets(newAthlete->name, 50, stdin);
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from sport_athlete.c:1:
+sport_athlete.h:10:10: note: destination object ‘name’ of size 25
+   10 |     char name[25];
+      |          ^~~~
+In file included from sport_athlete.h:2,
+                 from sport_athlete.c:1:
+/usr/include/stdio.h:568:14: note: in a call to function ‘fgets’ declared with attribute ‘access (write_only, 1, 2)’
+  568 | extern char *fgets (char *__restrict __s, int __n, FILE *__restrict __stream)
+      |              ^~~~~
+gcc -c sport_db.c
+gcc -o assignment5  sport_events.o sport_athlete.o sport_db.o
+make[1]: Leaving directory '/home/ggong3/2211/Assignments/CS2211_A5'
+[ggong3@compute CS2211_A5]$ ./assignment5
+****************************
+* 2211 Winter Olympics!    *
+****************************
+
+
+Enter entity type (h for help, q to quit, e for events, a for athletes): e
+Event:
+	Enter operation code
+	(i to insert, s to search,
+	u to update, p to print,
+	d to dump, r to restore,
+	e to erase): i
+Enter event code: 5
+Enter event name: skating
+Enter number of competitors: 12
+Enter the gender: W
+
+Enter entity type (h for help, q to quit, e for events, a for athletes): e
+Event:
+	Enter operation code
+	(i to insert, s to search,
+	u to update, p to print,
+	d to dump, r to restore,
+	e to erase): i
+Enter event code: 6
+Enter event name: Skiing
+Enter number of competitors: 13
+Enter the gender: M
+
+Enter entity type (h for help, q to quit, e for events, a for athletes): a
+Athlete:
+	Enter operation code
+	(i to insert, s to search,
+	u to update, p to print,
+	d to dump, r to restore,
+	e to erase): i
+Enter athlete code: 1
+Enter athlete name: John
+Enter age: 17
+Enter the gender: M
+
+Enter entity type (h for help, q to quit, e for events, a for athletes): a
+Athlete:
+	Enter operation code
+	(i to insert, s to search,
+	u to update, p to print,
+	d to dump, r to restore,
+	e to erase): i
+Enter athlete code: 2
+Enter athlete name: Mary
+Enter age: 18
+Enter the gender: W
+
+Enter entity type (h for help, q to quit, e for events, a for athletes): a
+Athlete:
+	Enter operation code
+	(i to insert, s to search,
+	u to update, p to print,
+	d to dump, r to restore,
+	e to erase): p
+Athlete Code Athlete Name                                    Age    Gender
+    1                                         John
+             17     M
+    2                                         Mary
+             18     W
+
+Enter entity type (h for help, q to quit, e for events, a for athletes): exit
+Event:
+	Enter operation code
+	(i to insert, s to search,
+	u to update, p to print,
+	d to dump, r to restore,
+	e to erase): q
+Illegal code
+
+Enter entity type (h for help, q to quit, e for events, a for athletes): q
+[ggong3@compute CS2211_A5]$ exit
+exit
+Script done.
+[ggong3@compute ~]$ cd 2211
+[ggong3@compute 2211]$ cd Assignments
+[ggong3@compute Assignments]$ ls
+Assignment1  CS2211_A5  CS2211_AssignmentFive
+[ggong3@compute Assignments]$ cd CS2211_AssignmentFive
+[ggong3@compute CS2211_AssignmentFive]$ script assignment5.txt
+Script started, output log file is 'assignment5.txt'.
+[ggong3@compute CS2211_AssignmentFive]$ make
+make all
+make[1]: Entering directory '/home/ggong3/2211/Assignments/CS2211_AssignmentFive'
+gcc -c sport_events.c
+gcc -c sport_athlete.c
+sport_athlete.c: In function ‘insert_athlete’:
+sport_athlete.c:114:5: warning: ‘fgets’ writing 50 bytes into a region of size 25 overflows the destination [-Wstringop-overflow=]
+  114 |     fgets(newAthlete->name, 50,stdin);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from sport_athlete.c:1:
+sport_athlete.h:10:10: note: destination object ‘name’ of size 25
+   10 |     char name[25];
+      |          ^~~~
+In file included from sport_athlete.h:2,
+                 from sport_athlete.c:1:
+/usr/include/stdio.h:568:14: note: in a call to function ‘fgets’ declared with attribute ‘access (write_only, 1, 2)’
+  568 | extern char *fgets (char *__restrict __s, int __n, FILE *__restrict __stream)
+      |              ^~~~~
+sport_athlete.c: In function ‘update_athlete’:
+sport_athlete.c:176:13: warning: ‘fgets’ writing 50 bytes into a region of size 25 overflows the destination [-Wstringop-overflow=]
+  176 |             fgets(newAthlete->name, 50, stdin);
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from sport_athlete.c:1:
+sport_athlete.h:10:10: note: destination object ‘name’ of size 25
+   10 |     char name[25];
+      |          ^~~~
+In file included from sport_athlete.h:2,
+                 from sport_athlete.c:1:
+/usr/include/stdio.h:568:14: note: in a call to function ‘fgets’ declared with attribute ‘access (write_only, 1, 2)’
+  568 | extern char *fgets (char *__restrict __s, int __n, FILE *__restrict __stream)
+      |              ^~~~~
+gcc -c sport_db.c
+gcc -o assignment5  sport_events.o sport_athlete.o sport_db.o
+make[1]: Leaving directory '/home/ggong3/2211/Assignments/CS2211_AssignmentFive'
+[ggong3@compute CS2211_AssignmentFive]$ ./assignment5
+****************************
+* 2211 Winter Olympics!    *
+****************************
+
+
+Enter entity type (h for help, q to quit, e for events, a for athletes): e
+Event:
+	Enter operation code
+	(i to insert, s to search,
+	u to update, p to print,
+	d to dump, r to restore,
+	e to erase): i
+Enter event code: 1
+Enter event name: Skating
+Enter number of competitors: 12
+Enter the gender: M
+
+Enter entity type (h for help, q to quit, e for events, a for athletes): e
+Event:
+	Enter operation code
+	(i to insert, s to search,
+	u to update, p to print,
+	d to dump, r to restore,
+	e to erase): i
+Enter event code: 2
+Enter event name: Skiing
+Enter number of competitors: 13
+Enter the gender: W
+
+Enter entity type (h for help, q to quit, e for events, a for athletes): a
+Athlete:
+	Enter operation code
+	(i to insert, s to search,
+	u to update, p to print,
+	d to dump, r to restore,
+	e to erase): i
+Enter athlete code: 1
+Enter athlete name: Mary
+Enter age: 19
+Enter the gender: W
+
+Enter entity type (h for help, q to quit, e for events, a for athletes): a
+Athlete:
+	Enter operation code
+	(i to insert, s to search,
+	u to update, p to print,
+	d to dump, r to restore,
+	e to erase): 2
+Illegal code
+
+Enter entity type (h for help, q to quit, e for events, a for athletes): a
+Athlete:
+	Enter operation code
+	(i to insert, s to search,
+	u to update, p to print,
+	d to dump, r to restore,
+	e to erase): i
+Enter athlete code: 2
+Enter athlete name: Bob
+Enter age: 20
+Enter the gender: M
+
+Enter entity type (h for help, q to quit, e for events, a for athletes): q
+[ggong3@compute CS2211_AssignmentFive]$ make
+make all
+make[1]: Entering directory '/home/ggong3/2211/Assignments/CS2211_AssignmentFive'
+gcc -c sport_events.c
+gcc -c sport_athlete.c
+sport_athlete.c: In function ‘insert_athlete’:
+sport_athlete.c:114:5: warning: ‘fgets’ writing 50 bytes into a region of size 25 overflows the destination [-Wstringop-overflow=]
+  114 |     fgets(newAthlete->name, 50,stdin);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from sport_athlete.c:1:
+sport_athlete.h:10:10: note: destination object ‘name’ of size 25
+   10 |     char name[25];
+      |          ^~~~
+In file included from sport_athlete.h:2,
+                 from sport_athlete.c:1:
+/usr/include/stdio.h:568:14: note: in a call to function ‘fgets’ declared with attribute ‘access (write_only, 1, 2)’
+  568 | extern char *fgets (char *__restrict __s, int __n, FILE *__restrict __stream)
+      |              ^~~~~
+sport_athlete.c: In function ‘update_athlete’:
+sport_athlete.c:176:13: warning: ‘fgets’ writing 50 bytes into a region of size 25 overflows the destination [-Wstringop-overflow=]
+  176 |             fgets(newAthlete->name, 50, stdin);
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from sport_athlete.c:1:
+sport_athlete.h:10:10: note: destination object ‘name’ of size 25
+   10 |     char name[25];
+      |          ^~~~
+In file included from sport_athlete.h:2,
+                 from sport_athlete.c:1:
+/usr/include/stdio.h:568:14: note: in a call to function ‘fgets’ declared with attribute ‘access (write_only, 1, 2)’
+  568 | extern char *fgets (char *__restrict __s, int __n, FILE *__restrict __stream)
+      |              ^~~~~
+gcc -c sport_db.c
+gcc -o assignment5  sport_events.o sport_athlete.o sport_db.o
+make[1]: Leaving directory '/home/ggong3/2211/Assignments/CS2211_AssignmentFive'
+[ggong3@compute CS2211_AssignmentFive]$ ./assignment5
+****************************
+* 2211 Winter Olympics!    *
+****************************
+
+
+Enter entity type (h for help, q to quit, e for events, a for athletes): e
+Event:
+	Enter operation code
+	(i to insert, s to search,
+	u to update, p to print,
+	d to dump, r to restore,
+	e to erase): i
+Enter event code: 1
+Enter event name: Sledding
+Enter number of competitors: 12
+Enter the gender: M
+
+Enter entity type (h for help, q to quit, e for events, a for athletes): e
+Event:
+	Enter operation code
+	(i to insert, s to search,
+	u to update, p to print,
+	d to dump, r to restore,
+	e to erase): i
+Enter event code: 3
+Enter event name: Running
+Enter number of competitors: 14
+Enter the gender: W
+
+Enter entity type (h for help, q to quit, e for events, a for athletes): a
+Athlete:
+	Enter operation code
+	(i to insert, s to search,
+	u to update, p to print,
+	d to dump, r to restore,
+	e to erase): i
+Enter athlete code: 1
+Enter athlete name: Robin
+Enter age: 21
+Enter the gender: M
+
+Enter entity type (h for help, q to quit, e for events, a for athletes): a
+Athlete:
+	Enter operation code
+	(i to insert, s to search,
+	u to update, p to print,
+	d to dump, r to restore,
+	e to erase): i
+Enter athlete code: 3
+Enter athlete name: Robert
+Enter age: 23
+Enter the gender: M
+
+Enter entity type (h for help, q to quit, e for events, a for athletes): a
+Athlete:
+	Enter operation code
+	(i to insert, s to search,
+	u to update, p to print,
+	d to dump, r to restore,
+	e to erase): p
+Athlete Code      Athlete Name          Age      Gender
+     1	          Robin	                21		      M
+     3	         Robert	                23		      M
+
+Enter entity type (h for help, q to quit, e for events, a for athletes): q
+[ggong3@compute CS2211_AssignmentFive]$ exit
+exit
+Script done.
+[ggong3@compute CS2211_AssignmentFive]$ 

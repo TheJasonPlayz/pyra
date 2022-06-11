@@ -1,0 +1,86 @@
+Last login: Tue Mar  1 21:16:57 on ttys000
+gracegong@dyn172-23-46-255 ~ % ssh ggong3@compute.gaul.csd.uwo.ca
+ggong3@compute.gaul.csd.uwo.ca's password: 
+Last login: Tue Mar  1 21:18:19 2022 from 172.23.46.255
+[ggong3@compute ~]$ script a3p1.txt
+Script started, output log file is 'a3p1.txt'.
+[ggong3@compute ~]$ cd Assignment3
+[ggong3@compute Assignment3]$ gcc -o c ./array1.c
+[ggong3@compute Assignment3]$ ./c
+Enter array length : 
+5
+Please enter your integers separated by spaces:
+10 99 1 31423 55
+
+Part 1:
+Your array is: 10,99,1,31423,55
+Your array has 5 elements.
+The size of the array is 20 bytes.
+
+Part 2:
+The array in reverse is 55 31423 1 99 10 
+
+Part 3:
+The smallest value in your array is: 1
+
+Part 4:
+The sum of all values in your array is 31588
+
+Part 5:
+Your array with first and last element switched is: 55 99 1 31423 10 
+
+Part 6:
+Your array in sorted order is: 1 10 55 99 31423[ggong3@compute Assignment3]$ ./c
+Enter array length : 
+5
+Please enter your integers separated by spaces:
+1 2 3 4 6
+
+Part 1:
+Your array is: 1,2,3,4,6
+Your array has 5 elements.
+The size of the array is 20 bytes.
+
+Part 2:
+The array in reverse is 6 4 3 2 1 
+
+Part 3:
+The smallest value in your array is: 1
+
+Part 4:
+The sum of all values in your array is 16
+
+Part 5:
+Your array with first and last element switched is: 6 2 3 4 1 
+
+Part 6:
+Your array in sorted order is: 1 2 3 4 6[ggong3@compute Assignment3]$ 6
+bash: 6: command not found
+[ggong3@compute Assignment3]$ ./c
+Enter array length : 
+6
+Please enter your integers separated by spaces:
+6 5 4 3 2 1
+
+Part 1:
+Your array is: 6,5,4,3,2,1
+Your array has 6 elements.
+The size of the array is 24 bytes.
+
+Part 2:
+The array in reverse is 1 2 3 4 5 6 
+
+Part 3:
+The smallest value in your array is: 1
+
+Part 4:
+The sum of all values in your array is 21
+
+Part 5:
+Your array with first and last element switched is: 1 5 4 3 2 6 
+
+Part 6:
+Your array in sorted order is: 1 2 3 4 5 6[ggong3@compute Assignment3]$ exit
+exit
+Script done.
+[ggong3@compute ~]$ 

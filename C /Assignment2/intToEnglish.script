@@ -1,0 +1,25 @@
+Script started on 2022-02-08 23:14:50-05:00 [TERM="xterm-256color" TTY="/dev/pts/67" COLUMNS="80" LINES="24"]
+]0;ggong3@compute:~[?2004h[ggong3@compute ~]$ cd Assignment2
+[?2004l]0;ggong3@compute:~/Assignment2[?2004h[ggong3@compute Assignment2]$ gcc -o c ./intToEnglish.c
+[?2004l]0;ggong3@compute:~/Assignment2[?2004h[ggong3@compute Assignment2]$ ./c
+[?2004l
+Enter a number: 1
+One
+]0;ggong3@compute:~/Assignment2[?2004h[ggong3@compute Assignment2]$ 9
+[?2004lbash: 9: command not found
+]0;ggong3@compute:~/Assignment2[?2004h[ggong3@compute Assignment2]$ 10
+[?2004lbash: 10: command not found
+]0;ggong3@compute:~/Assignment2[?2004h[ggong3@compute Assignment2]$ 11
+[?2004lbash: 11: command not found
+]0;ggong3@compute:~/Assignment2[?2004h[ggong3@compute Assignment2]$ 20
+[?2004lbash: 20: command not found
+]0;ggong3@compute:~/Assignment2[?2004h[ggong3@compute Assignment2]$ 21
+[?2004lbash: 21: command not found
+]0;ggong3@compute:~/Assignment2[?2004h[ggong3@compute Assignment2]$ 100
+[?2004lbash: 100: command not found
+]0;ggong3@compute:~/Assignment2[?2004h[ggong3@compute Assignment2]$ 101
+[?2004lbash: 101: command not found
+]0;ggong3@compute:~/Assignment2[?2004h[ggong3@compute Assignment2]$ exit
+[?2004lexit
+
+Script done on 2022-02-08 23:16:22-05:00 [COMMAND_EXIT_CODE="127"]

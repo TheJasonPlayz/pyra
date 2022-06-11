@@ -1,0 +1,132 @@
+Last login: Tue Mar 22 20:39:10 on ttys002
+gracegong@dyn172-23-40-131 ~ % ssh ggong3@compute.gaul.csd.uwo.ca
+ggong3@compute.gaul.csd.uwo.ca's password: 
+Last login: Tue Mar 22 20:39:22 2022 from 172.23.40.131
+[ggong3@compute ~]$ script assignmentfourgg.txt
+Script started, output log file is 'assignmentfourgg.txt'.
+[ggong3@compute ~]$ cd Assignment4
+[ggong3@compute Assignment4]$ gcc -o c ./assss4.c
+[ggong3@compute Assignment4]$ ./c
+Enter operation code:p
+EVENT CODE		EVENT NAME			COMPETITORS		GENDER
+Enter operation code:i
+Enter the event code:0
+Event with code 0 already exist
+Enter operation code:Ice Hockey
+Invalid input!
+Enter operation code:12
+Invalid input!
+Enter operation code:M
+Invalid input!
+Enter operation code:i
+Enter the event code:1
+Enter event name:Ice Hockey
+
+Enter number of competitors:12
+Enter the gender:M
+Enter operation code:p
+EVENT CODE		EVENT NAME			COMPETITORS		GENDER
+     1	    Ice Hockey
+	                12		      M
+Enter operation code:i
+Enter the event code:1
+Event with code 1 already exist
+Enter operation code:i
+Enter the event code:3
+Enter event name:Curling
+
+Enter number of competitors:32
+Enter the gender:W
+Enter operation code:q
+[ggong3@compute Assignment4]$ script assignment4grace.txt
+Script started, output log file is 'assignment4grace.txt'.
+[ggong3@compute Assignment4]$ cd Assignment4
+bash: cd: Assignment4: No such file or directory
+[ggong3@compute Assignment4]$ gcc -o c ./Assignment4gg.c 
+[ggong3@compute Assignment4]$ ./c
+Enter operation code:p
+EVENT CODE		EVENT NAME			COMPETITORS		GENDER
+Enter operation code:i
+Enter the event code:1
+Enter event name:Ice Hockey
+
+Enter number of competitors:q
+Invalid number of player
+Enter operation code:q
+[ggong3@compute Assignment4]$ exit
+exit
+Script done.
+[ggong3@compute Assignment4]$ script a4gg.txt
+Script started, output log file is 'a4gg.txt'.
+[ggong3@compute Assignment4]$ gcc -o c ./Assignment4gg1.c
+./Assignment4gg1.c:1:1: error: unknown type name ‘Thx’
+    1 | Thx munchie
+      | ^~~
+./Assignment4gg1.c:1:12: error: expected ‘;’ before ‘typedef’
+    1 | Thx munchie
+      |            ^
+      |            ;
+[ggong3@compute Assignment4]$ gcc -o c ./Assignment4gg2.c
+[ggong3@compute Assignment4]$ ./c
+Enter operation code:i
+Enter the event code:1
+Enter event name:Ice Hockey
+Enter number of competitors:12
+Enter the gender:M
+Enter operation code:p
+EVENT CODE		EVENT NAME			COMPETITORS		GENDER
+     1	    Ice Hockey
+	                12		      M
+Enter operation code:q
+[ggong3@compute Assignment4]$ exit
+exit
+Script done.
+[ggong3@compute Assignment4]$ script a4gg1.txt
+Script started, output log file is 'a4gg1.txt'.
+[ggong3@compute Assignment4]$ gcc -o c ./Assignment4gg3.c
+[ggong3@compute Assignment4]$ ./c
+Enter operation code:i
+Enter the event code:1
+Enter event name:Ice Hockey
+Enter number of competitors:12
+Enter the gender:M
+Enter operation code:p
+EVENT CODE		EVENT NAME			COMPETITORS		GENDER
+     1	     Ice Hockey	                12		      M
+Enter operation code:i
+Enter the event code:2
+Enter event name:Sin
+Enter number of competitors:32
+Enter the gender:W
+Enter operation code:i
+Enter the event code:3
+Enter event name:Cu
+Enter number of competitors:16
+Enter the gender:X
+Enter operation code:i
+Enter the event code:3
+Event with code 3 already exist
+Enter operation code:p
+EVENT CODE		EVENT NAME			COMPETITORS		GENDER
+     1	     Ice Hockey	                12		      M
+     2	            Sin	                32		      W
+     3	             Cu	                16		      X
+Enter operation code:s
+Enter event code:1
+EVENT CODE		EVENT NAME			COMPETITORS		GENDER
+     1	     Ice Hockey	                12		      M
+Enter operation code:u
+Enter event code:1
+Enter event name:Ice Hockey
+Enter Number of competitors:30
+Enter gender:W
+Enter operation code:p
+EVENT CODE		EVENT NAME			COMPETITORS		GENDER
+     1	     Ice Hockey	                30		      W
+     2	            Sin	                32		      W
+     3	             Cu	                16		      X
+Enter operation code:q
+[ggong3@compute Assignment4]$ exit
+exit
+Script done.
+[ggong3@compute Assignment4]$ 

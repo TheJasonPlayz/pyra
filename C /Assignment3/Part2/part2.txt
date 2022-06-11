@@ -1,0 +1,83 @@
+CS2211 Assignment 3
+Grace Gong
+Student Number: 251151854
+1. Files
+   1. Suppose the command ls were unavailable. What command could you use to view files in the current directory instead? Explain why the command works?
+      * "echo *" shows the content in the next level of directories, but if we’re in the bottom level already, it shows the content of the current directory. 
+      * alternatively , find -maxdepth 1 would also work. 
+   2. What option do I need to supply to the rm command to ensure I am prompted before a file or directory is removed? 
+      * "-I" which stands for ‘interactive deletion’ prompts user before deleting
+      * Example: $ rm -i filename
+
+
+What option do I need to supply to the rm command to ensure I am not prompted before a file or directory is removed? 
+* "-f": Forcefully remove file without prompt 
+* When the rm command is used just with the file names, rm deletes all given files without confirmation by the user.
+
+
+What happens if both options are used simultaneously - which one has precedence? (does not remove anything?) 
+      * In case they’re both used, -f takes precedence and the system will proceed without asking for confirmation. 
+
+
+   3. What are some differences between the rename command and the mv command?
+* "mv" is a standard utility to move one or more files to a given target. It can be used to rename a file, if there's only one file to move. If there are several, mv only works if the target is a directory, and moves the files there.
+* If all you have is mv and you want to rename multiple files, you'll have to use a shell loop. There are a number of questions on that here on the site, see e.g. this, this, and others.
+* On the other hand, the various rename utilities rename files, individually.
+
+
+   4. The file command, when run against an executable program shows ELF 64-bit LSB executable. What does ELF mean in this context?
+      *   An executable file using the ELF file format consists of an ELF header, followed by a program header table or a section header table, or  both. The binary file follows a specific structure, and one of the most common ones is named ELF that abbreviates Executable and Linkable Format. It is widely used for executable files, relocatable object files, shared libraries, and core dumps.
+
+
+   5. Consider the empty file test.txt. Why does ls -l test.txt say the filesize is 0 but du test.txt says the file size is 1?
+      * "Ls -l"  say the filesize is 0 but du test.txt says the file size is 1 as ls -l shows the apparent file size. Ls -l  is a long listing which shows file permissions. Du Summarizes disk usage of the set of FILEs, recursively for Directories. Also. An empty file still takes up space on the physical disk. 
+
+----------------------------------------------------------------------------------------------------
+1. Directories
+   1. Find a better way to do the following
+mkdir grandparent
+mkdir grandparent/parent
+mkdir grandparent/parent/child
+
+
+* Use “mkdir -p grandparent/parent/child”
+
+
+   2. How do you create a directory with a space in it? How do you remove a directory with a space in it?
+create a directory with a space in it: 
+* escape the space
+mkdir hello\ there
+* You can also encapsulate the string, this way you do not have to escape the space.
+mkdir 'hello there'
+
+
+How do you remove a directory with a space in it?
+* remove spaces by escaping the space character with a backslash:
+rm -r test\ dir
+* If that doesn't work, have you tried enclosing it in single or double quotes:
+rm -r "test dir" or rm -r 'test dir'
+
+
+   3. How do I create a directory and set it's permissions to dr-x------ using only the mkdir command?
+
+* Use "mkdir -m 500 directoryname"
+
+
+   4. Suppose I was working in /dir1/dir2/dir3 and I cd to /dir4/dir5/dir6. What is an easy way to get back to /dir1/dir2/dir3 without using the explicit command cd /dir1/dir2/dir3 (perhaps I forgot what the full path name was).
+      * "cd - (previous directory)"
+
+
+   5. Suppose I used pushd to add 10 folders to my stack. How do I quickly determine which folder is the 6th folder in my stack and how do I quickly cd to it?
+      * Use "dirs -l -v" to print the whole numbered directory stack before using pushd +6 to quickly cd to it
+-----------------------------------------------------------------------------------------------------
+2. Permissions
+   1. What option(s) do I need to add to chmod to print out what modifications are being made?
+      * chmod -c
+   2. What option(s) do I need to add to chown to get file2 ownership to simply match file1?
+      * Use chown -–reference=file1 file2 
+   3. What option(s) do I need to add to the stat command to display file permission, user ownership, and group ownership only?
+      * Use “stat -c ‘%A %U %G’ filename”
+   4. How do you grant a group permission to write data to a file, but prevent the users in that group from moving, removing, or renaming the file?
+      * Chmod g=rw- fileName
+   5. When using chmod in symbolic mode, what happens if u/g/o/a are omitted. Eg. chmod +x <filename>
+      * it only changes write for the owner, not the groups and the other users

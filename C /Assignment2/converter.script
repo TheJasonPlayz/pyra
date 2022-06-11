@@ -1,0 +1,131 @@
+Script started on 2022-02-08 23:04:32-05:00 [TERM="xterm-256color" TTY="/dev/pts/81" COLUMNS="80" LINES="24"]
+]0;ggong3@compute:~[?2004h[ggong3@compute ~]$ ls
+[?2004l[0m[01;34m2211[0m              [01;34mDesktop[0m         [01;34mPublic[0m
+A1                [01;34mDocuments[0m       question2_assignment1gg.txt
+a1z               [01;34mDownloads[0m       question2_assignment1.txt
+a2z               [01;32mhello[0m           question3_assignmentgg.txt
+[01;32ma.out[0m             hello.c         question4_assignmentlog.txt
+[01;34mAssignment2[0m       intToEnglish.c  [01;34mTemplates[0m
+C1                L1              [01;34mTmp[0m
+converter.c       [01;34mMusic[0m           [01;34mVideos[0m
+converter.script  [01;34mPictures[0m        [01;36mwinter2022lab[0m
+]0;ggong3@compute:~[?2004h[ggong3@compute ~]$ cd Assignment2
+[?2004l]0;ggong3@compute:~/Assignment2[?2004h[ggong3@compute Assignment2]$ gcc -o c ./converter.c
+[?2004l]0;ggong3@compute:~/Assignment2[?2004h[ggong3@compute Assignment2]$ ./c
+[?2004lConverter
+• 1 for conversion between Kilometer and Mile
+• 2 for conversion between Meter and Feet
+• 3 for conversion between Centimetre and Inch
+• 4 for conversion between Celsius and Fahrenheit
+• 5 for quit(In case of 5, the program will terminate.
+Enter your choice: 1
+• K for conversion from Kilometer to Mile • M for conversion from Mile to Kilometer: K
+Please provide Kilometer value which you want to convert to mile: 1
+1.00 Kilometer is equal to 0.62 mile.
+
+
+• 1 for conversion between Kilometer and Mile
+• 2 for conversion between Meter and Feet
+• 3 for conversion between Centimetre and Inch
+• 4 for conversion between Celsius and Fahrenheit
+• 5 for quit(In case of 5, the program will terminate.
+Enter your choice: 2
+• M for conversion from Meter to Feet • F for conversion from Feet to Meter: M
+Please provide meter value which you want to convert to feet: 1
+1.00 Meter is equal to 3.28 Feet.
+
+
+• 1 for conversion between Kilometer and Mile
+• 2 for conversion between Meter and Feet
+• 3 for conversion between Centimetre and Inch
+• 4 for conversion between Celsius and Fahrenheit
+• 5 for quit(In case of 5, the program will terminate.
+Enter your choice: 3
+•C for conversion from Centimetre to Inch • I for conversion from Inch to Centimetre: C
+Please provide feet value which you want to convert to inches: 1
+1.00 centimeter is equal to 0.39 inches.
+
+
+• 1 for conversion between Kilometer and Mile
+• 2 for conversion between Meter and Feet
+• 3 for conversion between Centimetre and Inch
+• 4 for conversion between Celsius and Fahrenheit
+• 5 for quit(In case of 5, the program will terminate.
+Enter your choice: 4
+• C for conversion from Celsius to Fahrenheit • F for conversion from Fahrenheit to Celsius: 1
+Invalid input
+• 1 for conversion between Kilometer and Mile
+• 2 for conversion between Meter and Feet
+• 3 for conversion between Centimetre and Inch
+• 4 for conversion between Celsius and Fahrenheit
+• 5 for quit(In case of 5, the program will terminate.
+Enter your choice: 1
+• K for conversion from Kilometer to Mile • M for conversion from Mile to Kilometer: 2
+Invalid input
+• 1 for conversion between Kilometer and Mile
+• 2 for conversion between Meter and Feet
+• 3 for conversion between Centimetre and Inch
+• 4 for conversion between Celsius and Fahrenheit
+• 5 for quit(In case of 5, the program will terminate.
+Enter your choice: 1
+• K for conversion from Kilometer to Mile • M for conversion from Mile to Kilometer: M
+Please provide mile value which you want to convert to Kilometer: 2
+2.00 Mile is equal to 3.22 Kilometer.
+
+
+• 1 for conversion between Kilometer and Mile
+• 2 for conversion between Meter and Feet
+• 3 for conversion between Centimetre and Inch
+• 4 for conversion between Celsius and Fahrenheit
+• 5 for quit(In case of 5, the program will terminate.
+Enter your choice: 2
+• M for conversion from Meter to Feet • F for conversion from Feet to Meter: F
+Please provide feet value which you want to convert to meter: 2
+2.00 feet is equal to 0.61 meter.
+
+
+• 1 for conversion between Kilometer and Mile
+• 2 for conversion between Meter and Feet
+• 3 for conversion between Centimetre and Inch
+• 4 for conversion between Celsius and Fahrenheit
+• 5 for quit(In case of 5, the program will terminate.
+Enter your choice: 3
+•C for conversion from Centimetre to Inch • I for conversion from Inch to Centimetre: I
+Please provide inch value which you want to convert to centimeter: 2
+2.00 inch is equal to 5.08 centimeter.
+
+
+• 1 for conversion between Kilometer and Mile
+• 2 for conversion between Meter and Feet
+• 3 for conversion between Centimetre and Inch
+• 4 for conversion between Celsius and Fahrenheit
+• 5 for quit(In case of 5, the program will terminate.
+Enter your choice: 4
+• C for conversion from Celsius to Fahrenheit • F for conversion from Fahrenheit to Celsius: F
+Please provide Fahrenheit value which you want to convert to Celsius: 2
+2.00 Farenheit is equal to -16.67 Celsius.
+
+
+• 1 for conversion between Kilometer and Mile
+• 2 for conversion between Meter and Feet
+• 3 for conversion between Centimetre and Inch
+• 4 for conversion between Celsius and Fahrenheit
+• 5 for quit(In case of 5, the program will terminate.
+Enter your choice: 5
+]0;ggong3@compute:~/Assignment2[?2004h[ggong3@compute Assignment2]$ gcc -o c ./intToEnglish.c
+[?2004l]0;ggong3@compute:~/Assignment2[?2004h[ggong3@compute Assignment2]$ ./c
+[?2004l
+Enter a number: 1
+One
+]0;ggong3@compute:~/Assignment2[?2004h[ggong3@compute Assignment2]$ 2
+[?2004lbash: 2: command not found
+]0;ggong3@compute:~/Assignment2[?2004h[ggong3@compute Assignment2]$ 3
+[?2004lbash: 3: command not found
+]0;ggong3@compute:~/Assignment2[?2004h[ggong3@compute Assignment2]$ 4
+[?2004lbash: 4: command not found
+]0;ggong3@compute:~/Assignment2[?2004h[ggong3@compute Assignment2]$ 10
+[?2004lbash: 10: command not found
+]0;ggong3@compute:~/Assignment2[?2004h[ggong3@compute Assignment2]$ exit
+[?2004lexit
+
+Script done on 2022-02-08 23:09:26-05:00 [COMMAND_EXIT_CODE="127"]

@@ -1,4 +1,4 @@
-#Grace Gong CS1026 10/7
+
 #'Order' is where the variables for each possible food item are assigned with the price number, except for the combo orders which will be calculated from the individual items
 #the items listed below correspond to the prices that were indicated in the assignment, but are shown without the $ sign for now. So Egg is $0.99, etc., all rounded to 2 decimal places
 order = {

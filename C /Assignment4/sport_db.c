@@ -1,5 +1,5 @@
 //Name: Grace Gong
-//Student Number: 25151854
+
 //Description: designing and implementing a database of all sporting events which will be used throughout the Olympics.
 
 //stdio. h is a header file which has the necessary information to include the input/output related functions in our program.
